@@ -8,6 +8,7 @@ UCI_DATASETS = [
     "glass",
     "zoo",
     "iris",
+    "avinash",
 ]
 
 
@@ -50,6 +51,7 @@ def load_uci_data(dataset):
         "zoo": (1, 17, -1),
         "iris": (0, 4, -1),
         "glass": (1, 10, -1),
+        "avinash":(1,12,-1),
     }
     data_path = os.path.join(os.environ["DATAPATH"], dataset, "{}.data".format(dataset))
     classes = {}
