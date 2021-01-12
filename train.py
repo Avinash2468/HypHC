@@ -99,6 +99,11 @@ def train(args):
                 counter = 0
                 best_cost = cost
                 best_model = model.state_dict()
+                print("Prnitng somethng")
+                for param_tensor in model.state_dict():
+                    print(param_tensor, "\t", model.state_dict()[param_tensor])
+                print("Printing the embedding")
+                #print(best_model)
             else:
                 counter += 1
                 if counter == args.patience:
