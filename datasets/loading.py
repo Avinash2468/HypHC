@@ -51,7 +51,7 @@ def load_uci_data(dataset):
         "zoo": (1, 17, -1),
         "iris": (0, 4, -1),
         "glass": (1, 10, -1),
-        "avinash":(1,12,-1),
+        "avinash":(1,13,-1),
     }
     data_path = os.path.join(os.environ["DATAPATH"], dataset, "{}.data".format(dataset))
     classes = {}
@@ -63,6 +63,7 @@ def load_uci_data(dataset):
             
             if len(split_line) >= end_idx - start_idx + 1:
                 x.append([float(x) for x in split_line[start_idx:end_idx]])
+				
                 label = split_line[label_idx]
                 if not label in classes:
                     classes[label] = class_counter
@@ -71,6 +72,8 @@ def load_uci_data(dataset):
     y = np.array(y, dtype=int)
     x = np.array(x, dtype=float)
     mean = x.mean(0)
-    std = x.std(0)
-    x = (x - mean) / std
+    std = x.std(0) 
+    print(x)
+    print("std", std)
+    #x = (x - mean) / std
     return x, y
