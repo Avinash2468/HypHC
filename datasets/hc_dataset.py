@@ -6,25 +6,30 @@ import numpy as np
 import torch
 import torch.utils.data as data
 
+from datasets.loading import load_data
 from datasets.triples import generate_all_triples, samples_triples
 
 
 class HCDataset(data.Dataset):
     """Hierarchical clustering dataset."""
 
-    def __init__(self, features, labels, similarities, num_samples):
+    def __init__(self, features, labels, sim, num_samples, data_dir):
         """Creates Hierarchical Clustering dataset with triples.
 
         @param labels: ground truth labels
         @type labels: np.array of shape (n_datapoints,)
         @param similarities: pairwise similarities between datapoints
         @type similarities: np.array of shape (n_datapoints, n_datapoints)
-        """
-        self.features = features
-        self.labels = labels
-        self.similarities = similarities
-        self.n_nodes = self.similarities.shape[0]
+        """ 
+        self.n_nodes = 59260
         self.triples = self.generate_triples(num_samples)
+        x, y_true, similarities = load_data(data_dir)
+        self.features = x
+        x = None
+        self.labels = y_true
+        y = None
+        self.similarities = similarities
+        similarities = None
 
     def __len__(self):
         return len(self.triples)

@@ -1,0 +1,11 @@
+==========================================
+SLURM_JOB_ID = 444170
+SLURM_NODELIST = gnode68
+SLURM_JOB_GPUS = 0,1,2,3
+==========================================
+/var/spool/slurmd/job444170/slurm_script: line 12: cd: HypHC: No such file or directory
+/var/spool/slurmd/job444170/slurm_script: line 14: hyphc_env/bin/activate: No such file or directory
+/var/spool/slurmd/job444170/slurm_script: line 15: set_env.sh: No such file or directory
+python: can't open file 'train.py': [Errno 2] No such file or directory
+mv: missing destination file operand after '8a5c1d0aa06931c10fb0170ee015e31fd2432e3b172f14a3abbb5d5e84d19ae4'
+Try 'mv --help' for more information.

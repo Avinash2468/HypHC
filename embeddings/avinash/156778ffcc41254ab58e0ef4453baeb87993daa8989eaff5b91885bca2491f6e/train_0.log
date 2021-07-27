@@ -1,0 +1,6 @@
+2021-07-27 18:27:48,674 INFO Using seed 0.
+2021-07-27 18:27:48,676 INFO Using double precision.
+2021-07-27 18:27:48,676 INFO Generating triples.
+2021-07-27 18:31:44,311 INFO Total of 100000 triples
+2021-07-27 18:32:58,897 INFO Start training
+2021-07-27 18:46:02,503 INFO 	 Epoch 0 | average train loss: 1.000006

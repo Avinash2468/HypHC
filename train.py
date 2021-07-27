@@ -4,7 +4,7 @@ import argparse
 import json
 import logging
 import os
-
+import psutil
 import numpy as np
 import torch
 import torch.utils.data as data
@@ -55,17 +55,23 @@ def train(args):
         torch.set_default_dtype(torch.float64)
 
     # create dataset
-    x, y_true, similarities = load_data(args.dataset)
-    dataset = HCDataset(x, y_true, similarities, num_samples=args.num_samples)
+    print('RAM memory % used before load data:', psutil.virtual_memory()[2], flush=True)    
+    #x, y_true, similarities = load_data(args.dataset)
+    print('RAM memory % used after load data:', psutil.virtual_memory()[2], flush=True)    
+    dataset = HCDataset(None, None, None, args.num_samples, args.dataset)
+    print("in the middle", flush=True)
     dataloader = data.DataLoader(dataset, batch_size=args.batch_size, shuffle=True, num_workers=8, pin_memory=True)
+    print("created dataset", flush=True)
 
     # create model
     model = HypHC(dataset.n_nodes, args.rank, args.temperature, args.init_size, args.max_scale)
     model.to("cuda")
-
+    print("created model", flush=True)
+   
     # create optimizer
     Optimizer = getattr(optim, args.optimizer)
     optimizer = Optimizer(model.parameters(), args.learning_rate)
+    print("created optimiser", flush=True)
 
     # train model
     best_cost = np.inf
@@ -99,6 +105,11 @@ def train(args):
                 counter = 0
                 best_cost = cost
                 best_model = model.state_dict()
+                print("Prnitng somethng")
+                for param_tensor in model.state_dict():
+                    print(param_tensor, "\t", model.state_dict()[param_tensor])
+                print("Printing the embedding")
+                #print(best_model)
             else:
                 counter += 1
                 if counter == args.patience:

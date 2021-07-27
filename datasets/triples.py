@@ -5,18 +5,22 @@ from tqdm import tqdm
 
 
 def samples_triples(n_nodes, num_samples):
+    print(n_nodes, num_samples, flush=True)
     num_samples = int(num_samples)
     all_nodes = np.arange(n_nodes)
-    mesh = np.array(np.meshgrid(all_nodes, all_nodes))
-    pairs = mesh.T.reshape(-1, 2)
+    print("meshing", all_nodes.shape, flush=True)
+    #mesh = np.array(np.meshgrid(all_nodes, all_nodes))
+    #pairs = mesh.T.reshape(-1, 2)
+    pairs = np.array(np.meshgrid(all_nodes, all_nodes)).T.reshape(-1,2)
+    print("meshed", pairs.shape, flush=True)
     pairs = pairs[pairs[:, 0] < pairs[:, 1]]
     n_pairs = pairs.shape[0]
     if num_samples < n_pairs:
-        print("Generating all pairs subset")
+        print("Generating all pairs subset", flush=True)
         subset = np.random.choice(np.arange(n_pairs), num_samples, replace=False)
         pairs = pairs[subset]
     else:
-        print("Generating all pairs superset")
+        print("Generating all pairs superset", flush=True)
         k_base = int(num_samples / n_pairs)
         k_rem = num_samples - (k_base * n_pairs)
         subset = np.random.choice(np.arange(n_pairs), k_rem, replace=False)
