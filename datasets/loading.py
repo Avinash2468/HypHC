@@ -69,11 +69,7 @@ def load_uci_data(dataset):
         "zoo": (1, 17, -1),
         "iris": (0, 4, -1),
         "glass": (1, 10, -1),
-<<<<<<< HEAD
         "avinash":(1, 601, 0),
-=======
-        "avinash":(1,13,-1),
->>>>>>> 829009ff5aaacb6ef850178e3140069df4918021
     }
     data_path = os.path.join(os.environ["DATAPATH"], dataset, "{}.data".format(dataset))
     print(data_path)
@@ -103,9 +99,5 @@ def load_uci_data(dataset):
     std = x.std(0) 
     print(x)
     print("std", std)
-<<<<<<< HEAD
     x = (x - mean) / std
-=======
-    #x = (x - mean) / std
->>>>>>> 829009ff5aaacb6ef850178e3140069df4918021
     return x, y
