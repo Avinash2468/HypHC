@@ -28,7 +28,11 @@ deactivate () {
     fi
 
     unset VIRTUAL_ENV
+<<<<<<< HEAD
     if [ ! "${1:-}" = "nondestructive" ] ; then
+=======
+    if [ ! "$1" = "nondestructive" ] ; then
+>>>>>>> 829009ff5aaacb6ef850178e3140069df4918021
     # Self destruct!
         unset -f deactivate
     fi
@@ -37,7 +41,11 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
+<<<<<<< HEAD
 VIRTUAL_ENV="/home2/sp504/HypHC/hyphc_env"
+=======
+VIRTUAL_ENV="/home/avinash123/HypHC/hyphc_env"
+>>>>>>> 829009ff5aaacb6ef850178e3140069df4918021
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

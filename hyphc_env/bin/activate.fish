@@ -29,7 +29,11 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
+<<<<<<< HEAD
 set -gx VIRTUAL_ENV "/home2/sp504/HypHC/hyphc_env"
+=======
+set -gx VIRTUAL_ENV "/home/avinash123/HypHC/hyphc_env"
+>>>>>>> 829009ff5aaacb6ef850178e3140069df4918021
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
@@ -52,7 +56,11 @@ if test -z "$VIRTUAL_ENV_DISABLE_PROMPT"
         set -l old_status $status
 
         # Prompt override?
+<<<<<<< HEAD
         if test -n "(hyphc_env) "
+=======
+        if test -n "(hyphc_env) "            
+>>>>>>> 829009ff5aaacb6ef850178e3140069df4918021
             printf "%s%s" "(hyphc_env) " (set_color normal)
         else
             # ...Otherwise, prepend env
