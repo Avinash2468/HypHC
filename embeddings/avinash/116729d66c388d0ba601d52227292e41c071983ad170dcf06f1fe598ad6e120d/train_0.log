@@ -3,3 +3,99 @@
 2021-07-27 18:48:45,431 INFO Generating triples.
 2021-07-27 18:57:29,524 INFO Total of 100000 triples
 2021-07-27 18:58:54,392 INFO Start training
+2021-07-27 20:48:37,000 INFO Using seed 0.
+2021-07-27 20:48:37,002 INFO Using double precision.
+2021-07-27 20:48:37,002 INFO Generating triples.
+2021-07-27 20:51:36,008 INFO Using seed 0.
+2021-07-27 20:51:36,010 INFO Using double precision.
+2021-07-27 20:51:36,010 INFO Generating triples.
+2021-07-27 21:04:23,183 INFO Total of 100000 triples
+2021-07-27 21:23:09,767 INFO Using seed 0.
+2021-07-27 21:23:09,769 INFO Using double precision.
+2021-07-27 21:23:09,769 INFO Generating triples.
+2021-07-27 21:24:08,069 INFO Using seed 0.
+2021-07-27 21:24:08,072 INFO Using double precision.
+2021-07-27 21:24:08,072 INFO Generating triples.
+2021-07-27 21:33:06,569 INFO Total of 100000 triples
+2021-07-27 21:34:23,222 INFO Start training
+2021-07-27 21:58:03,770 INFO 	 Epoch 0 | average train loss: 1.000006
+2021-07-29 19:25:45,571 INFO Using seed 0.
+2021-07-29 19:25:45,575 INFO Using double precision.
+2021-07-29 19:25:45,576 INFO Generating triples.
+2021-07-29 19:29:41,962 INFO Total of 100000 triples
+2021-07-29 19:32:01,940 INFO Start training
+2021-07-29 19:58:03,868 INFO 	 Epoch 0 | average train loss: 1.000006
+2021-07-29 23:47:25,948 INFO Using seed 0.
+2021-07-29 23:47:25,950 INFO Using double precision.
+2021-07-29 23:47:25,950 INFO Generating triples.
+2021-07-29 23:54:00,023 INFO Total of 100000 triples
+2021-07-29 23:55:21,272 INFO Start training
+2021-07-30 00:21:40,979 INFO 	 Epoch 0 | average train loss: 1.000006
+2021-07-30 01:15:21,294 INFO Using seed 0.
+2021-07-30 01:15:21,296 INFO Using double precision.
+2021-07-30 01:15:21,297 INFO Generating triples.
+2021-07-30 01:34:53,795 INFO Total of 100000 triples
+2021-07-30 01:36:16,860 INFO Start training
+2021-07-30 02:01:20,251 INFO 	 Epoch 0 | average train loss: 1.000006
+2021-07-30 10:34:14,258 INFO Using seed 0.
+2021-07-30 10:34:14,260 INFO Using double precision.
+2021-07-30 10:34:14,261 INFO Generating triples.
+2021-07-30 10:52:20,311 INFO Total of 100000 triples
+2021-07-30 10:53:44,697 INFO Start training
+2021-07-30 11:18:24,700 INFO 	 Epoch 0 | average train loss: 1.000006
+2021-07-30 11:20:00,806 INFO Using seed 0.
+2021-07-30 11:20:00,809 INFO Using double precision.
+2021-07-30 11:20:00,809 INFO Generating triples.
+2021-07-30 11:21:08,248 INFO Using seed 0.
+2021-07-30 11:21:08,250 INFO Using double precision.
+2021-07-30 11:21:08,250 INFO Generating triples.
+2021-07-30 11:28:03,740 INFO Total of 100000 triples
+2021-07-30 11:29:27,603 INFO Start training
+2021-07-30 11:53:38,087 INFO 	 Epoch 0 | average train loss: 1.000006
+2021-07-30 21:57:38,711 INFO Using seed 0.
+2021-07-30 21:57:38,713 INFO Using double precision.
+2021-07-30 21:57:38,714 INFO Generating triples.
+2021-07-30 22:06:49,678 INFO Total of 100000 triples
+2021-07-30 22:08:07,674 INFO Start training
+2021-07-30 22:33:20,741 INFO 	 Epoch 0 | average train loss: 1.000006
+2021-07-30 23:11:49,636 INFO Using seed 0.
+2021-07-30 23:11:49,638 INFO Using double precision.
+2021-07-30 23:11:49,638 INFO Generating triples.
+2021-07-30 23:23:25,202 INFO Total of 100000 triples
+2021-07-30 23:24:50,989 INFO Start training
+2021-07-30 23:50:55,885 INFO 	 Epoch 0 | average train loss: 1.000006
+2021-07-31 12:19:53,987 INFO Using seed 0.
+2021-07-31 12:19:53,989 INFO Using double precision.
+2021-07-31 12:19:53,990 INFO Generating triples.
+2021-07-31 12:26:50,145 INFO Total of 100000 triples
+2021-07-31 12:28:06,169 INFO Start training
+2021-07-31 12:51:45,981 INFO 	 Epoch 0 | average train loss: 1.000006
+2021-07-31 12:57:06,182 INFO Dasgupta's cost:	69368720905580.0000
+2021-07-31 13:22:46,290 INFO 	 Epoch 1 | average train loss: 1.000005
+2021-07-31 13:28:34,152 INFO Dasgupta's cost:	69368720905580.0000
+2021-07-31 13:54:02,233 INFO 	 Epoch 2 | average train loss: 1.000003
+2021-07-31 14:00:19,986 INFO Dasgupta's cost:	69368720905580.0000
+2021-07-31 14:24:46,638 INFO 	 Epoch 3 | average train loss: 1.000002
+2021-07-31 14:30:37,354 INFO Dasgupta's cost:	69368720905580.0000
+2021-07-31 14:54:57,322 INFO 	 Epoch 4 | average train loss: 1.000001
+2021-07-31 15:00:49,797 INFO Dasgupta's cost:	69368720905580.0000
+2021-07-31 15:24:56,239 INFO 	 Epoch 5 | average train loss: 1.000000
+2021-07-31 15:30:54,695 INFO Dasgupta's cost:	69368720905580.0000
+2021-07-31 15:56:35,166 INFO 	 Epoch 6 | average train loss: 1.000000
+2021-07-31 16:02:07,759 INFO Dasgupta's cost:	69368720905580.0000
+2021-07-31 16:26:29,521 INFO 	 Epoch 7 | average train loss: 1.000000
+2021-07-31 16:32:16,124 INFO Dasgupta's cost:	69368720905580.0000
+2021-07-31 16:56:40,547 INFO 	 Epoch 8 | average train loss: 1.000000
+2021-07-31 17:02:32,923 INFO Dasgupta's cost:	69368720905580.0000
+2021-07-31 17:28:02,560 INFO 	 Epoch 9 | average train loss: 1.000000
+2021-07-31 17:33:46,749 INFO Dasgupta's cost:	69368720905580.0000
+2021-07-31 17:59:22,742 INFO 	 Epoch 10 | average train loss: 1.000000
+2021-07-31 18:05:26,108 INFO Dasgupta's cost:	69368720905580.0000
+2021-07-31 18:30:31,530 INFO 	 Epoch 11 | average train loss: 1.000000
+2021-07-31 18:36:28,581 INFO Dasgupta's cost:	69368720905580.0000
+2021-07-31 19:00:44,785 INFO 	 Epoch 12 | average train loss: 1.000000
+2021-07-31 19:06:47,574 INFO Dasgupta's cost:	69368720905580.0000
+2021-07-31 19:31:15,765 INFO 	 Epoch 13 | average train loss: 1.000000
+2021-07-31 19:37:27,525 INFO Dasgupta's cost:	69368720905580.0000
+2021-07-31 20:02:51,917 INFO 	 Epoch 14 | average train loss: 1.000000
+2021-07-31 20:08:50,443 INFO Dasgupta's cost:	69368720905580.0000

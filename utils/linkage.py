@@ -40,14 +40,22 @@ def nn_merge_uf_fast_np(xs, S, partition_ratio=None, verbose=False):
     # Construct distance matrix (negative similarity; since numpy only has increasing sorting)
     xs0 = xs[None, :, :]
     xs1 = xs[:, None, :]
-    dist_mat = -S(xs0, xs1)  # (n, n)
-    i, j = np.meshgrid(np.arange(n, dtype=int), np.arange(n, dtype=int))
-
+    print("making the dist matricx", flush=True)
+    #dist_mat = -S(xs0, xs1)  # (n, n)
+    dist_mat = np.zeros((xs0.shape[1], xs0.shape[1]), dtype=float)
+    print("made dist mat and n is", n, flush=True)
+    #for i in tqdm(range(xs0.shape[1])):
+    #    dist_mat[i,:] = (xs0*xs1[i]).sum(-1)
+    #dist_mat = np.einsum("ijk,mnk->jm",xs0,xs1)
+    #i, j = np.meshgrid(np.arange(n, dtype=int), np.arange(n, dtype=int), sparse = True)
+    print("einsum is done")
     # Keep only unique pairs (upper triangular indices)
     idx = np.tril_indices(n, -1)
-    ij = np.stack([i[idx], j[idx]], axis=-1)
+    #ij = np.stack([i[idx], j[idx]], axis=-1)
+    #ij = np.zeros((int((n*(n-1))/2),2), dtype = int)
+    ij = np.load("/scratch/ij_mat.npy")
     dist_mat = dist_mat[idx]
-
+    print("Now we're here", flush=True)
     # Sort pairs
     if partition_ratio is None:
         idx = np.argsort(dist_mat, axis=0)

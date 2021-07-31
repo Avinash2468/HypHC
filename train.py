@@ -99,16 +99,16 @@ def train(args):
         if (epoch + 1) % args.eval_every == 0:
             model.eval()
             tree = model.decode_tree(fast_decoding=args.fast_decoding)
-            cost = dasgupta_cost(tree, similarities)
+            cost = dasgupta_cost(tree, dataset.similarities)
             logging.info("{}:\t{:.4f}".format("Dasgupta's cost", cost))
             if cost < best_cost:
                 counter = 0
                 best_cost = cost
                 best_model = model.state_dict()
-                print("Prnitng somethng")
+                print("Prnitng somethng", flush=True)
                 for param_tensor in model.state_dict():
                     print(param_tensor, "\t", model.state_dict()[param_tensor])
-                print("Printing the embedding")
+                print("Printing the embedding", flush=True)
                 #print(best_model)
             else:
                 counter += 1
@@ -139,7 +139,7 @@ def train(args):
     model.eval()
     logging.info("Decoding embeddings.")
     tree = model.decode_tree(fast_decoding=args.fast_decoding)
-    cost = dasgupta_cost(tree, similarities)
+    cost = dasgupta_cost(tree, dataset.similarities)
     logging.info("{}:\t{:.4f}".format("Dasgupta's cost", cost))
 
     if args.save:
