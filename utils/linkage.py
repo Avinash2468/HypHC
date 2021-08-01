@@ -47,7 +47,7 @@ def nn_merge_uf_fast_np(xs, S, partition_ratio=None, verbose=False):
     print("made dist mat and n is", n, flush=True)
     print('RAM memory % used before filling the matrix:', psutil.virtual_memory()[2], flush=True) 
     for i in tqdm(range(xs0.shape[1])):
-        dist_mat[i,:] = (xs0*xs1[i]).sum(-1)
+        dist_mat[i,:] = - (xs0*xs1[i]).sum(-1)
     #dist_mat = np.einsum("ijk,mnk->jm",xs0,xs1)
     #i, j = np.meshgrid(np.arange(n, dtype=int), np.arange(n, dtype=int), sparse = True)
     print('RAM memory % used after filling the matrix:', psutil.virtual_memory()[2], flush=True) 
