@@ -5,6 +5,7 @@ import time
 import numpy as np
 import torch
 from tqdm import tqdm
+import psutil
 
 from mst import mst
 from unionfind import unionfind
@@ -44,23 +45,29 @@ def nn_merge_uf_fast_np(xs, S, partition_ratio=None, verbose=False):
     #dist_mat = -S(xs0, xs1)  # (n, n)
     dist_mat = np.zeros((xs0.shape[1], xs0.shape[1]), dtype=float)
     print("made dist mat and n is", n, flush=True)
-    #for i in tqdm(range(xs0.shape[1])):
-    #    dist_mat[i,:] = (xs0*xs1[i]).sum(-1)
+    print('RAM memory % used before filling the matrix:', psutil.virtual_memory()[2], flush=True) 
+    for i in tqdm(range(xs0.shape[1])):
+        dist_mat[i,:] = (xs0*xs1[i]).sum(-1)
     #dist_mat = np.einsum("ijk,mnk->jm",xs0,xs1)
     #i, j = np.meshgrid(np.arange(n, dtype=int), np.arange(n, dtype=int), sparse = True)
-    print("einsum is done")
+    print('RAM memory % used after filling the matrix:', psutil.virtual_memory()[2], flush=True) 
+    xs0 = None
+    xs1 = None
+    xs = None
+    print('RAM memory % used after freeing xs0 and xs1:', psutil.virtual_memory()[2], flush=True) 
+    
+    print("einsum is done", flush=True)
     # Keep only unique pairs (upper triangular indices)
     idx = np.tril_indices(n, -1)
     #ij = np.stack([i[idx], j[idx]], axis=-1)
     #ij = np.zeros((int((n*(n-1))/2),2), dtype = int)
-    ij = np.load("/scratch/ij_mat.npy")
     dist_mat = dist_mat[idx]
-    print("Now we're here", flush=True)
+    print("Skipped loaded npy into memory", flush=True)
     # Sort pairs
     if partition_ratio is None:
         idx = np.argsort(dist_mat, axis=0)
     else:
-        k, ks = ij.shape[0], []
+        k, ks = int((n*(n-1))/2), []
         while k > 0:
             k = int(k // partition_ratio)
             ks.append(k)
@@ -68,9 +75,19 @@ def nn_merge_uf_fast_np(xs, S, partition_ratio=None, verbose=False):
         if verbose:
             print(ks)
         idx = np.argpartition(dist_mat, ks, axis=0)
+
+    print('RAM memory % used before freeing dist mat:', psutil.virtual_memory()[2], flush=True) 
+    dist_mat = None
+    print('RAM memory % used after freeing dist mat:', psutil.virtual_memory()[2], flush=True) 
+    
+    ij = np.load("/scratch/ij_mat.npy")
     ij = ij[idx]
 
+    print('RAM memory % used after loading ij:', psutil.virtual_memory()[2], flush=True) 
+    
     # Union find merging
     uf = unionfind.UnionFind(n)
+    print("made uf data struictutr", flush=True)
     uf.merge(ij)
+    print("finished merging", flush=True)
     return uf.tree

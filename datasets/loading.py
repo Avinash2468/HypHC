@@ -38,8 +38,8 @@ def load_data(dataset, normalize=True):
     #cos = (x0 * x1).sum(-1)
     #cos = np.multiply(x0, x1).sum(-1)
     cos = np.zeros((x0.shape[1], x0.shape[1]), dtype=float)
-    #for i in tqdm(range(x0.shape[1])):
-    #    cos[i,:] = (x0*x1[i]).sum(-1)
+    for i in tqdm(range(x0.shape[1])):
+        cos[i,:] = (x0*x1[i]).sum(-1)
     #cos = np.einsum("ijk,mnk->jm",x0,x1)
     print("done", flush=True)
     similarities = 0.5 * (1 + cos)

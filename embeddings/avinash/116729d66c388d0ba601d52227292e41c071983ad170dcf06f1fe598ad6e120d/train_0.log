@@ -99,3 +99,40 @@
 2021-07-31 19:37:27,525 INFO Dasgupta's cost:	69368720905580.0000
 2021-07-31 20:02:51,917 INFO 	 Epoch 14 | average train loss: 1.000000
 2021-07-31 20:08:50,443 INFO Dasgupta's cost:	69368720905580.0000
+2021-07-31 20:48:01,411 INFO Using seed 0.
+2021-07-31 20:48:01,416 INFO Using double precision.
+2021-07-31 20:48:01,416 INFO Generating triples.
+2021-07-31 20:54:54,462 INFO Total of 100000 triples
+2021-07-31 21:46:22,081 INFO Using seed 0.
+2021-07-31 21:46:22,083 INFO Using double precision.
+2021-07-31 21:46:22,083 INFO Generating triples.
+2021-07-31 21:53:20,816 INFO Total of 100000 triples
+2021-07-31 23:58:05,236 INFO Start training
+2021-08-01 00:24:02,467 INFO 	 Epoch 0 | average train loss: 1.124437
+2021-08-01 10:01:05,165 INFO Using seed 0.
+2021-08-01 10:01:05,167 INFO Using double precision.
+2021-08-01 10:01:05,168 INFO Generating triples.
+2021-08-01 10:08:25,152 INFO Total of 100000 triples
+2021-08-01 12:12:46,856 INFO Start training
+2021-08-01 12:37:55,387 INFO 	 Epoch 0 | average train loss: 1.124437
+2021-08-01 13:11:11,528 INFO Using seed 0.
+2021-08-01 13:11:11,530 INFO Using double precision.
+2021-08-01 13:11:11,530 INFO Generating triples.
+2021-08-01 13:30:56,068 INFO Total of 100000 triples
+2021-08-01 15:34:38,558 INFO Start training
+2021-08-01 16:01:09,527 INFO 	 Epoch 0 | average train loss: 1.124437
+2021-08-01 16:19:37,715 INFO Dasgupta's cost:	78064746635277.3906
+2021-08-01 16:46:55,707 INFO 	 Epoch 1 | average train loss: 1.123812
+2021-08-01 16:59:58,333 INFO Dasgupta's cost:	78047109240762.3594
+2021-08-01 17:27:22,373 INFO 	 Epoch 2 | average train loss: 1.123358
+2021-08-01 17:42:27,622 INFO Dasgupta's cost:	78058493958646.2031
+2021-08-01 18:10:36,941 INFO 	 Epoch 3 | average train loss: 1.123045
+2021-08-01 18:25:49,911 INFO Dasgupta's cost:	78111599801565.0625
+2021-08-01 18:52:33,867 INFO 	 Epoch 4 | average train loss: 1.122827
+2021-08-01 19:06:06,826 INFO Dasgupta's cost:	78154136613823.0781
+2021-08-01 19:33:03,063 INFO 	 Epoch 5 | average train loss: 1.122671
+2021-08-01 19:48:12,071 INFO Dasgupta's cost:	78190813832634.1406
+2021-08-01 20:15:23,963 INFO 	 Epoch 6 | average train loss: 1.122554
+2021-08-01 20:28:13,092 INFO Dasgupta's cost:	78221658952705.9062
+2021-08-01 20:55:01,424 INFO 	 Epoch 7 | average train loss: 1.122462
+2021-08-01 21:10:26,270 INFO Dasgupta's cost:	78234579549668.6719
